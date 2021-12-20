@@ -38,6 +38,9 @@ void ByteBufferFree(ByteBuffer* buffer)
     {
         free(buffer->data);
     }
+    buffer->size = 0;
+    buffer->position = 0;
+    buffer->capacity = 0;
 }
 
 void ByteBufferClear(ByteBuffer* buffer)
