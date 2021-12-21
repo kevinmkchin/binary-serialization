@@ -175,7 +175,7 @@ int ByteBufferReadFromFile(ByteBuffer* buffer, const char* filePath)
     }
 
     fread(bb.data, 1, sz, fp);
-    bb.size = sz;
+    bb.size = (uint32_t)sz;
     *buffer = bb;
 
     fclose(fp);
